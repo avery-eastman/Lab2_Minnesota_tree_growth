@@ -1,6 +1,6 @@
 ---
 title: "Minnesota Tree Growth Data"
-format: html
+output: html
 ---
 
 ```{r setup, include=FALSE}
@@ -8,13 +8,14 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r message=FALSE, warning=FALSE}
-tree_data <- read.csv("data/doi_10_5061_dryad_18pm5__v20170130/Itter_et_al_EAP16-0589.R1/tree_dat.csv")
+tree_data <- read.csv("/Users/Avery/github/Lab2_Minnesota_tree_growth/data/doi_10_5061_dryad_18pm5__v20170130/Itter_et_al_EAP16-0589.R1/tree_dat.csv")
+head(tree_data)
 ```
 
 ### Question 1: Use glimpse to understand the structure and names of the dataset. Decribe the structure and what you see in the dataset?
 
 ```{r, message=FALSE, warning=FALSE}
-install.packages("dplyr")
+install.packages("dplyr", repos = "https://cran.rstudio.com/")
 library(dplyr)
 glimpse(tree_data)
 ```
@@ -270,7 +271,7 @@ slice_tail(species_growth_sum, n = 3)
 The 3 species with the fastest growth are PIRE, PIBA, and POTR. On the other hand, the 3 species with the slowest growth are QURU, LALA, and THOC
 
 Here is an image of each the fastest growing species:
-![Pinus Banksiana species (PIBA)](/Users/Avery/github/Lab2_Minnesota_tree_growth/images/PIBA_pinus banksiana.png)
-![Pinus Resinosa species (PIRE)](/Users/Avery/github/Lab2_Minnesota_tree_growth/images/PIRE_pinus resinosa.png)
-![Populus Tremuloides (POTR)](/Users/Avery/github/Lab2_Minnesota_tree_growth/images/POTR_populus tremuloides.png)
+![Pinus Banksiana species (PIBA)](/Users/Avery/github/Lab2_Minnesota_tree_growth/images/PIBA_pinus_banksiana.png)
+![Pinus Resinosa species (PIRE)](/Users/Avery/github/Lab2_Minnesota_tree_growth/images/PIRE_pinus_resinosa.png)
+![Populus Tremuloides (POTR)](/Users/Avery/github/Lab2_Minnesota_tree_growth/images/POTR_populus_tremuloides.png)
 
